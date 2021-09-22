@@ -1,0 +1,63 @@
+header {
+  padding: 20px 0px;
+  font-family: "Poppins";
+}
+header h2 {
+  font-weight: 600;
+}
+header .image {
+  margin-right: 20px;
+}
+
+#content {
+  margin-top: 20px;
+}
+#content a {
+  color: inherit;
+  text-decoration: inherit;
+}
+#content .menu-item {
+  transition: 0.1s;
+  cursor: pointer;
+}
+#content .menu-item:hover {
+  font-weight: 600;
+}
+#content .menu-item .icon {
+  font-size: 30px;
+}
+
+h2.title {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.project-item {
+  margin-bottom: 10x;
+}
+.project-item .number {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 60px;
+  height: 60px;
+  font-size: 18px;
+  background: #AAA;
+}
+.project-item .number span {
+  font-weight: bold;
+}
+.project-item .project-description {
+  width: calc(100% - 60px);
+}
+.project-item .project-description h3 {
+  margin: 0;
+  font-size: 20px;
+}
+.project-item .project-description h6 {
+  margin: 0;
+  font-size: 14px;
+}
+.project-item .project-description p {
+  margin-top: 8px;
+  font-size: 14px;
+}
