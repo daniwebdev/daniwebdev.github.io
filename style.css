@@ -1,63 +1,88 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
 header {
-  padding: 20px 0px;
-  font-family: "Poppins";
+    padding: 20px 0px;
+    font-family: "Poppins";
 }
+
 header h2 {
-  font-weight: 600;
+    font-weight: 600;
 }
+
+header a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
 header .image {
-  margin-right: 20px;
+    margin-right: 20px;
 }
 
 #content {
-  margin-top: 20px;
+    margin-top: 20px;
 }
+
 #content a {
-  color: inherit;
-  text-decoration: inherit;
+    color: inherit;
+    text-decoration: inherit;
 }
+
 #content .menu-item {
-  transition: 0.1s;
-  cursor: pointer;
+    transition: 0.1s;
+    cursor: pointer;
 }
+
 #content .menu-item:hover {
-  font-weight: 600;
+    font-weight: 600;
 }
+
 #content .menu-item .icon {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 h2.title {
-  font-size: 30px;
-  font-weight: 600;
+    font-size: 30px;
+    font-weight: 600;
 }
 
 .project-item {
-  margin-bottom: 10x;
+    margin-bottom: 15x;
 }
+
 .project-item .number {
-  border-radius: 50%;
-  margin-right: 10px;
-  width: 60px;
-  height: 60px;
-  font-size: 18px;
-  background: #AAA;
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    background: #e0e0e0;
 }
+
 .project-item .number span {
-  font-weight: bold;
+    font-weight: bold;
 }
+
 .project-item .project-description {
-  width: calc(100% - 60px);
+    width: calc(100% - 60px);
 }
+
 .project-item .project-description h3 {
-  margin: 0;
-  font-size: 20px;
+    margin: 0;
+    font-size: 20px;
 }
+
 .project-item .project-description h6 {
-  margin: 0;
-  font-size: 14px;
+    margin: 0;
+    font-size: 14px;
 }
+
 .project-item .project-description p {
-  margin-top: 8px;
-  font-size: 14px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+#contact {
+    font-size: 14px;
 }
