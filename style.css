@@ -1,14 +1,15 @@
 * {
     font-family: 'Poppins', sans-serif;
+    color: #404040;
 }
 
 header {
     padding: 20px 0px;
-    font-family: "Poppins";
 }
 
-header h2 {
+header .title {
     font-weight: 600;
+    font-size: 2em;
 }
 
 header a {
