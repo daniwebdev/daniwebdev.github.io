@@ -77,4 +77,22 @@ own_project.forEach((item, index) => {
       </div>
     </div>
   `);
+
+  fetch('https://dani.work/blog/wp-json/wp/v2/posts').then(res => res.json()).then(res => {
+
+    res.forEach((post, index) => {
+
+      $("#recent-posts .container").append(`
+        <div class="project-item d-flex align-items-start mb-2">
+          <div class="project-description">
+            <h3>
+              <a href="${post.link}" target="_blank">${post.title.rendered}</a>
+            </h3>
+            <p>${post.yoast_head_json.description}</p>
+          </div>
+        </div>
+      `);
+    });
+
+  })
 });
