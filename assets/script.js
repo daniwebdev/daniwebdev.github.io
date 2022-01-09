@@ -51,6 +51,14 @@ const own_project = [
       "Laravel",
     ]
   },
+  {
+    title: "JSON.WEB.ID",
+    description:"JSON.WEB.ID is a website that provides REST API for simulate Create, Read, Update, and Delete. It is a free service for everyone.",
+    website: "https://json.web.id",
+    tech_stack: [
+      "PHP",
+    ]
+  },
 ];
 
 own_project.forEach((item, index) => {
@@ -78,12 +86,12 @@ own_project.forEach((item, index) => {
     </div>
   `);
 
-  fetch('https://dani.work/blog/wp-json/wp/v2/posts').then(res => res.json()).then(res => {
+  fetch('https://dani.work/blog/wp-json/wp/v2/posts?per_page=5').then(res => res.json()).then(res => {
 
     res.forEach((post, index) => {
 
-      $("#recent-posts .container").append(`
-        <div class="project-item d-flex align-items-start mb-2">
+      $("#recent-posts .container .row").append(`
+        <div class="project-item d-flex align-items-start mb-2 col-md-6">
           <div class="project-description">
             <h3>
               <a href="${post.link}" target="_blank">${post.title.rendered}</a>
