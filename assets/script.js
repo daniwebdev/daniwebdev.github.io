@@ -1,6 +1,10 @@
 document.querySelector("#y").innerHTML = new Date().getFullYear();
 
 $(function () {   
+
+  site_info();
+
+
   const experiance = [
     {
       company: "Bonet Utama, PT",
@@ -114,3 +118,10 @@ own_project.forEach((item, index) => {
 
   })
 });
+
+function site_info() {
+  $.get('https://dani.work/blog/wp-json', res => {
+    console.log(res)
+    $('#page-title').html(res.name)
+  })  
+}
