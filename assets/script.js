@@ -4,51 +4,32 @@ $(function () {
 
   site_info();
 
+  $.getJSON('/experiance.json', experiance => {
+    experiance.forEach((item, index) => {
+      let links = ''
 
-  const experiance = [
-    {
-      company: "Bonet Utama, PT",
-      periode: "2016 - 2018 (fulltime)",
-      description: "My first carieer i become operator in the internet cafe (warnet). along with time i also try to create small app project like cashier app, registration form, management student app, event attendance. work with php (CodeIgniter), MySQL",
-    },
-    {
-      company: "Prioritas Group",
-      periode: "2018 - Current (fulltime)",
-      description: "One of private company in Bogor-Indonesia, and i'm as fullstack developer for building an ERP system and they have one mobile aplication for public and on there i'm work as back-end developer too. work with php (CodeIgniter, Laravel), Firebase, MS. SQL Server",
-    },
-    {
-      company: "Carsold - Car Bidding",
-      periode: "2019 (freelance)",
-      description: "i'm work as a freelancer for car selling and car bidding. work with php (Laravel), MySQL",
-    },
-    ,
-    {
-      company: "Some Project In Government",
-      periode: "2019, 2021 (as freelance at vendors)",
-      description: "Develop apps for help vendors to complete their project, i'm has been working for make dashboard GIS, collection data from disaster sensor, etc.",
-    },
-    {
-      company: "BSS - ATIOS Project",
-      periode: "2020 (freelance)",
-      description:
-        "Develop trading tools apps including features like membership, data feed, trading plan, charting, detail stock, historical, and more, work with python (Pandas), php (Laravel), nodeJS, postgresql, firebase",
-    }
-  ];
+      if(item.links != undefined) item.links.forEach(link => {
+        links += link
+      })
 
-  experiance.forEach((item, index) => {
-    $("#work-experiance .container").append(`
-    <div class="project-item d-flex align-items-start">
-      <div class="number d-flex align-items-center text-center">
-        <span class="w-100">${(index + 1).toString().padStart(2, "0")}</span>
+      $("#work-experiance .container").append(`
+      <div class="project-item d-flex align-items-start">
+        <div class="number d-flex align-items-center text-center">
+          <span class="w-100">${(index + 1).toString().padStart(2, "0")}</span>
+        </div>
+        <div class="project-description">
+          <h3>${item.company}</h3>
+          <h6>${item.periode}</h6>
+          <p>${item.description}</p>
+          <div>
+          <h6>Links</h6>
+          ${links}
+          </div>
+        </div>
       </div>
-      <div class="project-description">
-        <h3>${item.company}</h3>
-        <h6>${item.periode}</h6>
-        <p>${item.description}</p>
-      </div>
-    </div>
-  `);
-  });
+    `);
+    });
+  })
 });
 
 const own_project = [
