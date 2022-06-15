@@ -1,19 +1,30 @@
 document.querySelector("#y").innerHTML = new Date().getFullYear();
 
-$(function () {   
-
+$(function () {
   site_info();
 
-  $.getJSON('/experiance.json', experiance => {
+  $.getJSON("/experiance.json", (experiance) => {
     experiance.forEach((item, index) => {
-      let links = ''
+      let links = "";
 
-      if(item.links != undefined) item.links.forEach(link => {
-        links += link
-      })
+      if (item.links != undefined)
+        item.links.forEach((link) => {
+          links += link;
+        });
 
-      $("#work-experiance .container").append(`
-      <div class="project-item d-flex align-items-start">
+      let renderLinks = (links) => {
+        if (links != "") {
+          return `
+          <h6>Links</h6>
+          ${links}
+          `;
+        }
+
+        return ''
+      };
+
+      $("#work-experiance .container #we-content").append(`
+      <div class="project-item d-flex align-items-start col-md-6">
         <div class="number d-flex align-items-center text-center">
           <span class="w-100">${(index + 1).toString().padStart(2, "0")}</span>
         </div>
@@ -22,14 +33,13 @@ $(function () {
           <h6>${item.periode}</h6>
           <p>${item.description}</p>
           <div>
-          <h6>Links</h6>
-          ${links}
+          ${renderLinks(links)}
           </div>
         </div>
       </div>
     `);
     });
-  })
+  });
 });
 
 const own_project = [
@@ -38,26 +48,18 @@ const own_project = [
     description:
       "News gateway, information about investation, stock market, gold and trading tools.",
     website: "https://beritasaham.id",
-    tech_stack: [
-      "PHP",
-      "Python",
-      "JS",
-      "Postgresql",
-      "Laravel",
-    ]
+    tech_stack: ["PHP", "Python", "JS", "Postgresql", "Laravel"],
   },
   {
     title: "JSON.WEB.ID",
-    description:"JSON.WEB.ID is a website that provides REST API for simulate Create, Read, Update, and Delete. It is a free service for everyone.",
+    description:
+      "JSON.WEB.ID is a website that provides REST API for simulate Create, Read, Update, and Delete. It is a free service for everyone.",
     website: "https://json.web.id",
-    tech_stack: [
-      "PHP",
-    ]
+    tech_stack: ["PHP"],
   },
 ];
 
 own_project.forEach((item, index) => {
-
   var tech_stack = "";
 
   item.tech_stack.forEach((tech) => {
@@ -81,11 +83,11 @@ own_project.forEach((item, index) => {
     </div>
   `);
 
-  fetch('https://dani.work/blog/wp-json/wp/v2/posts?per_page=5').then(res => res.json()).then(res => {
-
-    res.forEach((post, index) => {
-
-      $("#recent-posts .container .row").append(`
+  fetch("https://dani.work/blog/wp-json/wp/v2/posts?per_page=5")
+    .then((res) => res.json())
+    .then((res) => {
+      res.forEach((post, index) => {
+        $("#recent-posts .container .row").append(`
         <div class="project-item d-flex align-items-start mb-2 col-md-6">
           <div class="project-description">
             <h3>
@@ -95,14 +97,13 @@ own_project.forEach((item, index) => {
           </div>
         </div>
       `);
+      });
     });
-
-  })
 });
 
 function site_info() {
-  $.get('https://dani.work/blog/wp-json', res => {
-    console.log(res)
-    $('#page-title').html(res.name)
-  })  
+  $.get("https://dani.work/blog/wp-json", (res) => {
+    console.log(res);
+    $("#page-title").html(res.name);
+  });
 }
