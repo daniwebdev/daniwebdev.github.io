@@ -1,4 +1,4 @@
-document.querySelector("#y").innerHTML = new Date().getFullYear();
+document.querySelector("#y").innerHTML = '&copy;' + new Date().getFullYear();
 
 $(function () {
   site_info();
@@ -83,7 +83,7 @@ own_project.forEach((item, index) => {
     </div>
   `);
 
-  fetch("https://dani.work/blog/wp-json/wp/v2/posts?per_page=5")
+  fetch("https://insideofcode.com/blog/wp-json/wp/v2/posts?per_page=5")
     .then((res) => res.json())
     .then((res) => {
       res.forEach((post, index) => {
@@ -93,6 +93,7 @@ own_project.forEach((item, index) => {
             <h3>
               <a href="${post.link}" target="_blank">${post.title.rendered}</a>
             </h3>
+            <p>Last modified at <date>${post.modified}</date></p>
             <p>${post.yoast_head_json.description}</p>
           </div>
         </div>
@@ -102,8 +103,8 @@ own_project.forEach((item, index) => {
 });
 
 function site_info() {
-  $.get("https://dani.work/blog/wp-json", (res) => {
-    console.log(res);
-    $("#page-title").html(res.name);
-  });
+  // $.get("https://insideofcode.com/blog/wp-json", (res) => {
+  //   console.log(res);
+  //   $("#page-title").html(res.name);
+  // });
 }

@@ -1,6 +1,6 @@
 [
   {
-    "company": "BSS Saham Indonesia",
+    "company": "ATIOS (www.atios.app)",
     "periode": "2020 (freelance)",
     "links": [
       "<a class=\"me-2\" href=\"https://play.google.com/store/apps/details?id=com.atios.app\"><img src=\"https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/android/android.png\" width=\"24px\"></a>",
@@ -14,12 +14,22 @@
     "description": "i'm work as a freelancer for car selling and car bidding. work with php (Laravel), MySQL"
   },
   {
-    "company": "Some projects in government",
-    "periode": "2019, 2021",
-    "description": "develop cooperation applications with vendors trusted by the government."
+    "company": "Tracking System POS",
+    "periode": "Jan 22 - Apr 22",
+    "description": "As a freelancer in a third party to work on an application belonging to the KOMINFO dirjen POS."
   },
   {
-    "company": "Prioritas Group",
+    "company": "Web Data Visualisation (BIG)",
+    "periode": "Jan 22 - Aug 22",
+    "description": "As a freelancer in a third party, collects data from sensor stations throughout Indonesia, then displays it in web-based visuals"
+  },
+  {
+    "company": "Harmony Living",
+    "periode": "Jan 22 - Mar 22 (Backend)",
+    "description": "E-commerce website for furniture companies in Bogor."
+  },
+  {
+    "company": "PESONA BUMI PAJAJARAN, PT",
     "periode": "2018 - Current (fulltime)",
     "description": "One of private company in Bogor-Indonesia, and i'm as fullstack developer for building an ERP system and they have one mobile aplication for public and on there i'm work as back-end developer too. work with php (CodeIgniter, Laravel), Firebase, MS. SQL Server, and Postgresql"
   },
