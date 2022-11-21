@@ -1,0 +1,51 @@
+[
+  {
+    "company": "NVERSNEWS.COM",
+    "periode": "Aug 2022",
+    "links": [
+      "<a href=\"https://nversnews.com\" target=\"_blank\" rel=\"nofollow\"><img src=\"https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/chrome/chrome.png\" width=\"24px\"></a>"
+    ],
+    "description": "NVERSNEWS.COM is one of the local online media from Bogor, this website is made with wordpress"
+  },
+  {
+    "company": "Delivery Tracking System",
+    "periode": "Jan 2022",
+    "links" : [
+      "<i class=\"\" style='color: #999'>Unpublished</i>"
+    ],
+    "description": "As a freelancer in a third party to work on an application belonging to the KOMINFO dirjen POS."
+  },
+  {
+    "company": "Web Data Visualisation (BIG)",
+    "periode": "Jan 2022",
+    "links" : [
+      "<i class=\"\" style='color: #999'>Unpublished</i>"
+    ],
+    "description": "As a freelancer in a third party, collects data from sensor stations throughout Indonesia, then displays it in web-based visuals"
+  },
+  {
+    "company": "Harmony Living",
+    "periode": "Mar 2022",
+    "links" : [
+      "<a href=\"https://harmonyliving.id\" target=\"_blank\" rel=\"nofollow\"><img src=\"https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/chrome/chrome.png\" width=\"24px\"></a>"
+    ],
+    "description": "E-commerce website for furniture companies in Bogor."
+  },
+  {
+    "company": "ATIOS",
+    "periode": "2020",
+    "links": [
+      "<a class=\"me-2\" href=\"https://play.google.com/store/apps/details?id=com.atios.app\"><img src=\"https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/android/android.png\" width=\"24px\"></a>",
+      "<a href=\"https://atios.app\"><img src=\"https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/chrome/chrome.png\" width=\"24px\"></a>"
+    ],
+    "description": "Develop trading tools apps including features like membership, data feed, trading plan, charting, detail stock, historical, and more, work with python (Pandas), php (Laravel), nodeJS, postgresql, firebase"
+  },
+  {
+    "company": "Carsold - Car Bidding",
+    "periode": "2019",
+    "links" : [
+      "<i class=\"\" style='color: #999'>Dead</i>"
+    ],
+    "description": "i'm work as a freelancer for car selling and car bidding. work with php (Laravel), MySQL"
+  }
+]

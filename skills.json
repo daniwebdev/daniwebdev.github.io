@@ -1,0 +1,94 @@
+[
+    {
+        "logo": "https://raw.githubusercontent.com/github/explore/ccc16358ac4530c6a69b1b80c7223cd2744dea83/topics/php/php.png",
+        "name": "PHP"
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png",
+        "name": "NodeJS"
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png",
+        "name": "MySQL"
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png",
+        "name": "Firebase"
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgresql/postgresql.png",
+        "name": "Postgresql"
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/github/explore/96943574ba0c0340ba6ea1e6f768e9abe43e34e1/topics/sql-server/sql-server.png",
+        "name": "Sql"
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/laravel/laravel.png",
+        "name": "Laravel"
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/wordpress/wordpress.png",
+        "name": "Wordpress"
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flutter/flutter.png",
+        "name": "Flutter"
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png",
+        "name": "Bootstrap"
+    },
+    {
+        "logo": "https://avatars.githubusercontent.com/u/67109815?s=200&v=4",
+        "name": "Tailwind"
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/vue/vue.png",
+        "name": "Vue"
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png",
+        "name": "Javascript"
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png",
+        "name": "HTML"
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png",
+        "name": "CSS"
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png",
+        "name": "Python"
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/go/go.png",
+        "name": "GO"
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/docker/docker.png",
+        "name": "Docker"
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/ubuntu/ubuntu.png",
+        "name": "Ubuntu"
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/windows/windows.png",
+        "name": "Windows"
+    },
+    {
+        "logo": "https://avatars.githubusercontent.com/u/16785467?s=200&v=4",
+        "name": "GCP"
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png",
+        "name": "Versioning"
+    },
+    {
+        "logo": "https://avatars.githubusercontent.com/u/1412239?s=200&v=4",
+        "name": "Web"
+    }
+]

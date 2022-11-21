@@ -33,6 +33,10 @@ $(function () {
           <h6>${item.periode}</h6>
           <p>${item.description}</p>
           <div>
+            <h6>Tech Stack</h6>
+            <b>${item.stacks}</b>
+          </div>
+          <div>
           ${renderLinks(links)}
           </div>
         </div>
@@ -40,6 +44,63 @@ $(function () {
     `);
     });
   });
+
+
+  $.getJSON("/portfolio.json", (experiance) => {
+    experiance.forEach((item, index) => {
+      let links = "";
+
+      if (item.links != undefined)
+        item.links.forEach((link) => {
+          links += link;
+        });
+
+      let renderLinks = (links) => {
+        if (links != "") {
+          return `
+          <h6>Links</h6>
+          ${links}
+          `;
+        }
+
+        return ''
+      };
+
+      $("#portfolio .container #we-content").append(`
+      <div class="project-item d-flex align-items-start col-md-6">
+        <div class="number d-flex align-items-center text-center">
+          <span class="w-100">${(index + 1).toString().padStart(2, "0")}</span>
+        </div>
+        <div class="project-description">
+          <h3>${item.company}</h3>
+          <h6>${item.periode}</h6>
+          <p>${item.description}</p>
+          <div>
+          ${renderLinks(links)}
+          </div>
+        </div>
+      </div>
+    `);
+    });
+  });
+
+  $.getJSON('/skills.json', (skills) => {
+
+    for(let skill of skills) {
+
+      let html = `
+      <div class="skill-wrap col-md-2 col-4">
+          <div class="skill-item">
+              <img width="65px" src="${skill.logo}" alt="${skill.name}">
+              <span class="d-block mt-2">${skill.name}</span>
+          </div>
+      </div>
+      `;
+      $('.skill-container .row').append(html)
+    }
+  })
+
+
 });
 
 const own_project = [
