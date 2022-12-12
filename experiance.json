@@ -2,8 +2,9 @@
   {
     "company": "PiXiL International (Kuwait)",
     "periode": "2022 - (fulltime remote)",
-    "stacks": "HTML, CSS, Javascript, Nest JS (Node)",
-    "description": "The company in Shuwaikh-Kuwait, and i'm as fullstack developer for building an ERP system and they have one mobile aplication for public and on there i'm work as back-end developer too. work with php (CodeIgniter, Laravel), Firebase, MS. SQL Server, and Postgresql"
+    "status": "active",
+    "stacks": "HTML, CSS, Javascript, Nest JS (Node), MySQL, MongoDB",
+    "description": "The company in Shuwaikh-Kuwait, i'm as software developer to build some of application developed "
   },
   {
     "company": "PESONA BUMI PAJAJARAN, PT",

@@ -4,8 +4,9 @@ $(function () {
   site_info();
 
   $.getJSON("/experiance.json", (experiance) => {
-    experiance.forEach((item, index) => {
+    experiance.reverse().forEach((item, index) => {
       let links = "";
+      let active = "";
 
       if (item.links != undefined)
         item.links.forEach((link) => {
@@ -23,13 +24,20 @@ $(function () {
         return ''
       };
 
+      if(item.status != undefined) {
+        
+
+          active = `<span class="px-2 bg-success text-white rounded animate__animated animate__swing animate__delay-2s" style="font-size: 12px">Currently Working</span>`
+      }
+
+
       $("#work-experiance .container #we-content").append(`
       <div class="project-item d-flex align-items-start col-md-6">
         <div class="number d-flex align-items-center text-center">
           <span class="w-100">${(index + 1).toString().padStart(2, "0")}</span>
         </div>
         <div class="project-description">
-          <h3>${item.company}</h3>
+          <h3>${item.company} ${active}</h3>
           <h6>${item.periode}</h6>
           <p>${item.description}</p>
           <div>
