@@ -97,7 +97,7 @@ $(function () {
     for(let skill of skills) {
 
       let html = `
-      <div class="skill-wrap col-md-2 col-4">
+      <div class="skill-wrap col-lg-2 col-md-3 col-sm-4 col-6">
           <div class="skill-item">
               <img width="65px" src="${skill.logo}" alt="${skill.name}">
               <span class="d-block mt-2">${skill.name}</span>
@@ -177,3 +177,13 @@ function site_info() {
   //   $("#page-title").html(res.name);
   // });
 }
+
+/* Slider */
+document.addEventListener( 'DOMContentLoaded', function () {
+  new Splide( '#image-carousel', {
+    perPage : 5,
+    type    : 'loop',
+    loop: true,
+  } )
+  .mount();
+} );
