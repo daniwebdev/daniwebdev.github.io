@@ -182,8 +182,24 @@ function site_info() {
 document.addEventListener( 'DOMContentLoaded', function () {
   new Splide( '#image-carousel', {
     perPage : 5,
-    type    : 'loop',
-    loop: true,
+    mediaQuery: 'max',
+    autoplay: 'pause',
+    interval: 1000,
+    type: 'loop',
+    breakpoints: {
+      430: {
+        perPage: 1,
+      },
+      640: {
+        perPage: 2,
+      },
+      800: {
+        perPage: 3,
+      },
+      1000: {
+        perPage: 4,
+      },
+    },
   } )
   .mount();
 } );
