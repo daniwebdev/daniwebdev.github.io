@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,9 +24,52 @@
             margin: auto;
         }
     </style>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'gray': {
+                            '50': '#edf2f5', 
+                            '100': '#dde5eb', 
+                            '200': '#abbbc9', 
+                            '300': '#7e93a8', 
+                            '400': '#3c4d69', 
+                            '500': '#10172a', 
+                            '600': '#0c1224', 
+                            '700': '#090e1f', 
+                            '800': '#060a1a', 
+                            '900': '#030612', 
+                            '950': '#01030d'
+                        }
+                    }
+                }
+            }
+        }
+
+
+       window.onload = function() {
+            document.querySelector('#dark-toggle').addEventListener('click', function() {
+                document.querySelector('#dark-toggle').classList.toggle('hidden');
+                document.querySelector('#light-toggle').classList.toggle('hidden');
+
+                document.documentElement.classList.toggle('dark');
+            })
+            document.querySelector('#light-toggle').addEventListener('click', function() {
+                document.querySelector('#dark-toggle').classList.toggle('hidden');
+                document.querySelector('#light-toggle').classList.toggle('hidden');
+                document.documentElement.classList.toggle('dark');
+
+            })
+       }
+    </script>
 </head>
 
-<body>
+<body class="dark:bg-gray-800 dark:text-gray-200">
+
+    <div class="fixed z-20 top-0 inset-x-0 flex justify-center overflow-hidden pointer-events-none"><div class="w-[108rem] flex-none flex justify-end"><picture><source srcset="https://tailwindcss.com/_next/static/media/docs@30.8b9a76a2.avif" type="image/avif"><img src="https://tailwindcss.com/_next/static/media/docs@tinypng.d9e4dcdc.png" alt="" class="w-[71.75rem] flex-none max-w-none dark:hidden" decoding="async"></picture><picture><source srcset="https://tailwindcss.com/_next/static/media/docs-dark@30.1a9f8cbf.avif" type="image/avif"><img src="https://tailwindcss.com/_next/static/media/docs-dark@tinypng.1bbe175e.png" alt="" class="w-[90rem] flex-none max-w-none hidden dark:block" decoding="async"></picture></div></div>
 
     <header>
 
@@ -36,10 +79,21 @@
             </div>
 
             <div class="flex-auto">
-                <div class="border-b md:text-auto md:text-start text-center w-full pb-4">
-                    <h1 class="title m-0 text-3xl font-semibold" id="page-title">daniwebdev</h1>
-                    <span class="text-2xl">Muhamad Yusup Hamdani</span>
-                    <h6 class="mt-1">Software Engineer <span class="mx-2">·</span> Backend Developer <span class="mx-2">·</span> Fullstack</h6>
+                <div class="border-b dark:border-gray-500 md:text-auto md:text-start text-center w-full pb-4 flex md:flex-row flex-col gap-4 items-center justify-between">
+                    <div>
+                        <h1 class="title m-0 text-3xl font-semibold" id="page-title">daniwebdev</h1>
+                        <span class="text-2xl">Muhamad Yusup Hamdani</span>
+                        <h6 class="mt-1">Software Engineer <span class="mx-2">·</span> Backend Developer <span class="mx-2">·</span> Fullstack</h6>
+
+                    </div>
+                    <div>
+                        <button id="dark-toggle" class="hidden bg-gray-900 flex items-center gap-3 w-[100px] text-gray-200 px-3 py-1 rounded-lg">
+                            <i class="text-2xl ri-moon-fill"></i> Dark
+                        </button>
+                        <button id="light-toggle" class="bg-gray-500/80 flex items-center gap-3 w-[100px] text-yellow-500 px-3 py-1 rounded-lg">
+                            <i class="text-2xl ri-sun-fill"></i> Light
+                        </button>
+                    </div>
                 </div>
 
                 <div class="py-3 md:block hidden">
@@ -76,6 +130,8 @@
                     </div>
                 </div>
             </div>
+
+            
         </div>
 
     </header>
@@ -84,16 +140,18 @@
     <section id="work-experiance" class="mt-20">
         <div class="container">
             <h2 class="text-4xl mb-3 font-semibold">Work Experiance</h2>
-            <p class="max-w-[650px] block">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias dignissimos quo quos magni quidem voluptatem totam amet excepturi laudantium voluptatum!</p>
+            <p class="max-w-[650px] block">
+                Discover my extensive work experience, spanning diverse industries and roles, showcasing my professional growth and expertise.
+            </p>
 
             <div id="we-content" class="mt-8 grid grid-cols-2 gap-10">
                 <div class="flex gap-5 mb-8">
                     <div class="">
-                        <span class="bg-gray-200 rounded-full block w-[60px] h-[60px] text-center flex items-center justify-center">01</span>
+                        <span class="bg-gray-200/20 dark:bg-gray-600/90 rounded-full block w-[60px] h-[60px] text-center flex items-center justify-center font-semibold text-xl">01</span>
                     </div>
                     <div class="project-description">
                         <h3 class="text-2xl font-semibold">Bonet Utama, PT </h3>
-                        <h4 class="text-gray-700 italic">2016 - 2018 (fulltime)</h4>
+                        <h4 class="text-gray-700 dark:text-gray-300 italic">2016 - 2018 (fulltime)</h4>
                         <p class="my-3">My first carieer i become operator in the internet cafe (warnet). along with time i also try to
                             create small app project like cashier app, registration form, management student app, event
                             attendance. work with php (CodeIgniter), MySQL</p>
@@ -101,19 +159,16 @@
                             <h5 class="">Tech Stack</h5>
                             <b>HTML, CSS, Javascript, CodeIgniter (PHP), MySQL</b>
                         </div>
-                        <div>
-    
-                        </div>
                     </div>
                 </div>
     
                 <div class="flex gap-5 mb-8">
                     <div class="">
-                        <span class="bg-gray-200 rounded-full block w-[60px] h-[60px] text-center flex items-center justify-center">02</span>
+                        <span class="bg-gray-200/20 dark:bg-gray-600/90 rounded-full block w-[60px] h-[60px] text-center flex items-center justify-center font-semibold text-xl">02</span>
                     </div>
                     <div class="project-description">
                         <h3 class="text-2xl font-semibold">PESONA BUMI PAJAJARAN, PT </h3>
-                        <h4 class="text-gray-700 italic">2018 - 2022 (fulltime)</h4>
+                        <h4 class="text-gray-700 dark:text-gray-300 italic">2018 - 2022 (fulltime)</h4>
                         <p class="my-3">One of private company in Bogor-Indonesia, and i'm as fullstack developer for building an ERP
                             system and they have one mobile aplication for public and on there i'm work as back-end
                             developer too. work with php (CodeIgniter, Laravel), Firebase, MS. SQL Server, and Postgresql
@@ -123,29 +178,31 @@
                             <b>HTML, CSS, Javascript, CodeIgniter (PHP), Laravel (PHP), SQL Server, PostgreSQL, Firebase,
                                 GCP</b>
                         </div>
-                        <div>
-    
-                        </div>
+
                     </div>
                 </div>
     
                 <div class="flex gap-5 mb-8">
                     <div class="">
-                        <span class="bg-gray-200 rounded-full block w-[60px] h-[60px] text-center flex items-center justify-center">02</span>
+                        <span class="bg-gray-200/20 dark:bg-gray-600/90 rounded-full block w-[60px] h-[60px] text-center flex items-center justify-center font-semibold text-xl">02</span>
                     </div>
                     <div class="project-description">
-                        <h3 class="text-2xl font-semibold">PiXiL International (Kuwait) <span
-                                class class="text-gray-700 italic"="px-2 bg-success text-white rounded animate__animated animate__swing animate__delay-2s"
-                                st class="my-3"yle="font-size: 12px">Currently Working</span></h3>
-                        <h6>2022 - (fulltime remote)</h6>
-                        <p>The company in Shuwaikh-Kuwait, i'm as software developer to build some of application developed
-                        </p>
+                        <h3 class="text-2xl font-semibold">PiXiL International (Kuwait)</h3>
+                        <h4 class="text-gray-700 dark:text-gray-300 italic">2022 - (fulltime remote)</h4>
+
+                        <p>The company in Shuwaikh-Kuwait, i'm as software developer to build some of application developed </p>
+                        
                         <div>
                             <h5 class="">Tech Stack</h5>
                             <b>HTML, CSS, Javascript, Nest JS (Node), MySQL, MongoDB</b>
                         </div>
-                        <div>
-    
+                        
+                        <div class="text-sm bg-gray-700 dark:bg-blue-900/70 px-3 py-1 rounded-lg text-gray-100 inline-block mt-3">
+                            <span class=" h-3 w-3 right-0 relative">
+                                <span class="animate-ping absolute inline-flex h-3 w-3 top-[.2rem] left-[-.2rem] rounded-full bg-red-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                            </span>
+                            <span class="text-xs ms-2">Currently</span>
                         </div>
                     </div>
                 </div>
@@ -154,33 +211,71 @@
     </section>
 
 
+    <section id="portfolio" class="mt-20">
+        <div class="container">
+            <h2 class="text-4xl mb-3 font-semibold">Portfolio</h2>
+            <p class="max-w-[650px] block">
+                Browse through my portfolio to witness the culmination of my skills, expertise, and creative endeavors across diverse industries.
+            </p>
+            
 
-    <section id="work-experiance" class="mt-20">
+
+            <div class="grid grid-cols-4 mt-5">
+
+                <div class="border dark:border-gray-500 rounded-lg overflow-hidden">
+                    <div class="w-full h-[200px]">
+                        <img style="object-fit: cover; object-position: center;" class="w-full h-full" src="https://via.placeholder.com/300x200" alt="oke">
+                    </div>
+
+                    <div class="p-4">
+
+                        <h3 class="text-2xl font-semibold">
+                            Lorem, ipsum dolor.
+                        </h3>
+    
+                        <p class="text-gray-300 mt-3">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, magni!
+                        </p>
+
+                        <div class="mt-5">
+                            <a class="hover:bg-[#0B1528] inline-block px-2 py-1 border border-[#0B1528] rounded-lg" href="https://google.com"><i class="ri-links-line text-3xl"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="my-own-project" class="mt-20">
         <div class="container">
             <h2 class="text-4xl mb-3 font-semibold">My Own Project</h2>
-            <p class="max-w-[650px] block">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias dignissimos quo quos magni quidem voluptatem totam amet excepturi laudantium voluptatum!</p>
-
+            <p class="max-w-[650px] block">
+                I also have self-made projects to fill my spare time.
+            </p>
 
             <div class="grid grid-cols-4 mt-5 gap-5">
-                <div class="border rounded-lg p-5">
+                <div class="border rounded-lg dark:border-gray-500 dark:shadow-lg p-5">
                     <h3 class="text-2xl font-semibold">
                         beritasaham.id
                     </h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique tenetur ratione natus in iusto assumenda!</p>
                 </div>
-                <div class="border rounded-lg p-5">
+                <div class="border rounded-lg dark:border-gray-500 dark:shadow-lg p-5">
                     <h3 class="text-2xl font-semibold">
                         goapi.io
                     </h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique tenetur ratione natus in iusto assumenda!</p>
                 </div>
-                <div class="border rounded-lg p-5">
+                <div class="border rounded-lg dark:border-gray-500 dark:shadow-lg p-5">
                     <h3 class="text-2xl font-semibold">
                         json.web.id
                     </h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique tenetur ratione natus in iusto assumenda!</p>
                 </div>
-                <div class="border rounded-lg p-5">
+                <div class="border rounded-lg dark:border-gray-500 dark:shadow-lg p-5">
                     <h3 class="text-2xl font-semibold">
                         insideofcode.com
                     </h3>
@@ -191,21 +286,19 @@
 
     </section>
 
-
-
     <section class="mt-20">
         <div class="container">
 
             <h2 class="text-4xl mb-3 font-semibold">
                 Tech Stack
             </h2>
-            <p class="max-w-[650px] block">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias dignissimos quo quos magni quidem voluptatem totam amet excepturi laudantium voluptatum!</p>
+            <p class="max-w-[650px] block">This ability is based on what I've done on a real project.</p>
 
 
             <div class="skill-container mt-8">
                 <div class="grid grid-cols-6 gap-2">
         
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px"
                                 src="https://raw.githubusercontent.com/github/explore/ccc16358ac4530c6a69b1b80c7223cd2744dea83/topics/php/php.png"
@@ -214,7 +307,7 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px"
                                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"
@@ -223,7 +316,7 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px"
                                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"
@@ -232,7 +325,7 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px"
                                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png"
@@ -241,7 +334,7 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px"
                                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/go/go.png"
@@ -250,7 +343,7 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px"
                                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flutter/flutter.png"
@@ -259,7 +352,7 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px"
                                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"
@@ -268,7 +361,7 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px"
                                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"
@@ -277,7 +370,7 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px"
                                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png"
@@ -286,7 +379,7 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px"
                                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgresql/postgresql.png"
@@ -295,7 +388,7 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px"
                                 src="https://raw.githubusercontent.com/github/explore/96943574ba0c0340ba6ea1e6f768e9abe43e34e1/topics/sql-server/sql-server.png"
@@ -304,7 +397,7 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px"
                                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/laravel/laravel.png"
@@ -313,7 +406,7 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px" src="https://avatars.githubusercontent.com/u/28507035?s=200&amp;v=4"
                                 alt="NestJS (TS)">
@@ -321,7 +414,7 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px"
                                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/wordpress/wordpress.png"
@@ -330,7 +423,7 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px"
                                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png"
@@ -339,14 +432,14 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px" src="https://avatars.githubusercontent.com/u/67109815?s=200&amp;v=4" alt="Tailwind">
                             <span class="block mt-4 font-semibold">Tailwind</span>
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px"
                                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/vue/vue.png"
@@ -355,7 +448,7 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px"
                                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png"
@@ -364,7 +457,7 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px"
                                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/docker/docker.png"
@@ -373,7 +466,7 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px"
                                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/ubuntu/ubuntu.png"
@@ -382,7 +475,7 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px"
                                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/windows/windows.png"
@@ -391,14 +484,14 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px" src="https://avatars.githubusercontent.com/u/16785467?s=200&amp;v=4" alt="GCP">
                             <span class="block mt-4 font-semibold">GCP</span>
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px"
                                 src="https://raw.githubusercontent.com/github/explore/fbceb94436312b6dacde68d122a5b9c7d11f9524/topics/aws/aws.png"
@@ -407,7 +500,7 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px"
                                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"
@@ -416,7 +509,7 @@
                         </div>
                     </div>
             
-                    <div class="border rounded-lg p-5 text-center flex flex-col cursor-pointer hover:bg-gray-100 items-center">
+                    <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center">
                         <div class="skill-item">
                             <img width="65px" src="https://avatars.githubusercontent.com/u/1412239?s=200&amp;v=4" alt="Web">
                             <span class="block mt-4 font-semibold">Web</span>
@@ -428,7 +521,48 @@
     </section>
 
 
-    <footer class="border-t mt-20 py-5">
+    <section class="mt-20">
+        <div class="container">
+
+            <h2 class="text-4xl mb-3 font-semibold">
+                RECENT POSTS
+            </h2>
+
+            <p class="max-w-[650px] block">
+                I blog to record what I have learned and am interested in. for more https://dani.work/blog
+            </p>
+
+
+            <div class="grid grid-cols-4 mt-5">
+                <div class="border dark:border-gray-500 rounded-lg overflow-hidden">
+                    <div class="w-full h-[200px]">
+                        <img style="object-fit: cover; object-position: center;" class="w-full h-full" src="https://via.placeholder.com/300x200" alt="oke">
+                    </div>
+
+                    <div class="p-4">
+
+                        <h3 class="text-2xl font-semibold">
+                            Lorem, ipsum dolor.
+                        </h3>
+    
+                        <p class="text-gray-300 mt-3">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, magni!
+                        </p>
+
+                        <div class="mt-4">
+                            <a href="">Read more...</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer class="border-t dark:border-gray-500 mt-20 py-5">
         <div class="container text-sm flex justify-between">
             <div></div>
             <div>
@@ -437,5 +571,18 @@
         </div>  
     </footer>
 
+
+    <template id="template-working-experience">
+        <div>
+            
+        </div>
+    </template>
+    <template id="template-tech-stack">
+        <div>
+            
+        </div>
+    </template>
 </body>
+
+
 </html>
