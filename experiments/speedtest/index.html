@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speedtest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+
+    <script>
+        function testDownloadSpeed() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://codepen.io/informiho/pen/CuGJI.html', true);
+            xhr.responseType = 'blob';
+
+            xhr.onload = function() {
+                var endTime = new Date().getTime();
+                var duration = (endTime - startTime) / 1000; // in seconds
+                var fileSize = xhr.response.size; // in bytes
+
+                var speedMbps = (fileSize / duration / 1024).toFixed(2);
+                console.log('Download Speed: ' + speedMbps + ' Mbps');
+            };
+
+            var startTime = new Date().getTime();
+            xhr.send();
+        }
+
+        testDownloadSpeed();
+
+        function testUploadSpeed() {
+            var xhr = new XMLHttpRequest();
+            var formData = new FormData();
+            var testData = new Array(10000000).join('a'); // 10MB of dummy data
+
+            formData.append('data', testData);
+
+            xhr.open('POST', 'https://codepen.io/informiho/pen/CuGJI.html', true);
+
+            xhr.onload = function() {
+                var endTime = new Date().getTime();
+                var duration = (endTime - startTime) / 1000; // in seconds
+                var fileSize = testData.length; // in bytes
+
+                var speedMbps = (fileSize / duration / 1024).toFixed(2);
+                console.log('Upload Speed: ' + speedMbps + ' Mbps');
+            };
+
+            var startTime = new Date().getTime();
+            xhr.send(formData);
+        }
+
+        testUploadSpeed();
+    </script>
+    
+</body>
+</html>
