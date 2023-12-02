@@ -189,6 +189,30 @@
 
     </section>
 
+    <section id="image-carousel" class="splide container mt-20" aria-label="Beautiful Images">
+        <h2 class="text-4xl mb-3 font-semibold">Shots</h2>
+
+        <div class="splide__track">
+              <ul class="splide__list">
+                  <li class="splide__slide p-1">
+                      <img src="/images/portfolio-shots/1_signal.png" alt="">
+                  </li>
+                  <li class="splide__slide p-1">
+                      <img src="/images/portfolio-shots/2_trading_platform.png" alt="">
+                  </li>
+                  <li class="splide__slide p-1">
+                      <img src="/images/portfolio-shots/3_web_cahsier.png" alt="">
+                  </li>
+                  <li class="splide__slide p-1">
+                      <img src="/images/portfolio-shots/4_sistem_penilaian.png" alt="">
+                  </li>
+                  <li class="splide__slide p-1">
+                      <img src="/images/portfolio-shots/5_news_portal.png" alt="">
+                  </li>
+              </ul>
+        </div>
+    </section>
+
     <section id="my-own-project" class="mt-20">
         <div class="container">
             <h2 class="text-4xl mb-3 font-semibold">My Own Project</h2>
@@ -261,7 +285,7 @@
             </h2>
 
             <p class="max-w-[650px] block">
-                I blog to record what I have learned and am interested in. for more https://dani.work/blog
+                I blog to record what I have learned and am interested in. for more <a class="text-purple-600 hover:underline" href="https://insideofcode.com">insideofcode.com</a>
             </p>
 
 
@@ -323,7 +347,7 @@
     <template id="template-portfolios">
         <div class="border dark:border-gray-500 rounded-lg overflow-hidden">
             <div class="w-full h-[200px]">
-                <img style="object-fit: cover; object-position: center;" class="w-full h-full" src="https://via.placeholder.com/300x200" alt="oke">
+                <img style="object-fit: cover; object-position: center;" class="w-full h-full" src="/images/placeholder-daniwebdev.webp" alt="oke">
             </div>
 
             <div class="p-4">
@@ -368,6 +392,8 @@
     </template>
 
 
+    <!-- partial -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script>
@@ -507,7 +533,36 @@
                     // `);
                 });
             });
+
+
         })
+
+
+            /* Slider */
+            document.addEventListener( 'DOMContentLoaded', function () {
+            new Splide( '#image-carousel', {
+                perPage : 5,
+                mediaQuery: 'max',
+                autoplay: 'pause',
+                interval: 1000,
+                type: 'loop',
+                breakpoints: {
+                430: {
+                    perPage: 1,
+                },
+                640: {
+                    perPage: 2,
+                },
+                800: {
+                    perPage: 3,
+                },
+                1000: {
+                    perPage: 4,
+                },
+                },
+            } )
+            .mount();
+            } );
     </script>
 </body>
 
