@@ -273,6 +273,7 @@
 
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -336,8 +337,11 @@
     </template>
 
     <template id="template-skills">
-        <div class="dark:border-gray-500 dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center justify-center">
-            <div class="skill-item">
+        <div class="dark:border-gray-500 relative dark:shadow-lg border rounded-lg p-5 text-center flex flex-col cursor-pointer dark:hover:bg-gray-600 dark:hover:shadow-gray-400/10 hover:bg-gray-100 items-center justify-center">
+            <div class="absolute top-1 left-1">
+                {badge}
+            </div>
+            <div class="skill-item relative my-5">
                 <img width="65px" src="{img}" alt="{name}" class="m-auto">
                 <span class="block mt-4 font-semibold">{name}</span>
             </div>
@@ -402,9 +406,16 @@
                 $('#skills').html('');
 
                 for(let skill of skills) {
+                    let badge = '';
+
+                    skill.label.forEach(xx => {
+                        badge += `<span class="inline-block bg-gray-300/10 text-xs px-2 py-1 rounded-lg">${xx}</span>`;
+                    })
+
                     let template = $('#template-skills').html()
                     .replace(/{img}/g, skill.logo)
                     .replace(/{name}/g, skill.name)
+                    .replace(/{badge}/g, badge)
                    
                     $('#skills').append(template)
                 }

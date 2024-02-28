@@ -1,102 +1,132 @@
 [
     {
         "logo": "https://raw.githubusercontent.com/github/explore/ccc16358ac4530c6a69b1b80c7223cd2744dea83/topics/php/php.png",
-        "name": "PHP"
+        "name": "PHP",
+        "label": ["Programming Language"]
     },
     {
         "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png",
-        "name": "NodeJS"
+        "name": "NodeJS",
+        "label": ["Programming Language"]
     },
     {
         "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png",
-        "name": "Javascript"
+        "name": "Javascript",
+        "label": ["Programming Language"]
     },
     {
         "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png",
-        "name": "Python"
+        "name": "Python",
+        "label": ["Programming Language"]
     },
     {
-        "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/go/go.png",
-        "name": "GO"
+        "logo": "https://avatars.githubusercontent.com/u/4314092?s=400&v=4",
+        "name": "GO",
+        "label": ["Programming Language"]
     },
     {
         "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flutter/flutter.png",
-        "name": "Flutter"
+        "name": "Flutter/Dart",
+        "label": ["Mobile"]
     },
     {
         "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png",
-        "name": "HTML"
+        "name": "HTML",
+        "label": ["Web"]
     },
     {
         "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png",
-        "name": "CSS"
+        "name": "CSS",
+        "label": ["Web"]
     },
     {
         "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png",
-        "name": "MySQL"
+        "name": "MySQL",
+        "label": ["DB"]
     },
     {
         "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgresql/postgresql.png",
-        "name": "Postgresql"
+        "name": "Postgresql",
+        "label": ["DB"]
     },
     {
         "logo": "https://raw.githubusercontent.com/github/explore/96943574ba0c0340ba6ea1e6f768e9abe43e34e1/topics/sql-server/sql-server.png",
-        "name": "Sql Server"
+        "name": "Sql Server",
+        "label": ["DB"]
     },
     {
         "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/laravel/laravel.png",
-        "name": "Laravel"
+        "name": "Laravel",
+        "label": ["Framework"]
     },
     {
         "logo": "https://avatars.githubusercontent.com/u/28507035?s=200&v=4",
-        "name": "NestJS (TS)"
+        "name": "NestJS (TS)",
+        "label": ["Framework"]
     },
     {
         "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/wordpress/wordpress.png",
-        "name": "Wordpress"
+        "name": "Wordpress",
+        "label": ["CMS"]
     },
     {
         "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png",
-        "name": "Bootstrap"
+        "name": "Bootstrap",
+        "label": ["Frontend"]
     },
     {
         "logo": "https://avatars.githubusercontent.com/u/67109815?s=200&v=4",
-        "name": "Tailwind"
+        "name": "Tailwind",
+        "label": ["Frontend"]
     },
     {
         "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/vue/vue.png",
-        "name": "Vue"
+        "name": "Vue",
+        "label": ["FE Framework"]
     },
     {
         "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png",
-        "name": "Firebase"
+        "name": "Firebase",
+        "label": ["DB,Storage,Mobile"]
     },
     {
         "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/docker/docker.png",
-        "name": "Docker"
+        "name": "Docker",
+        "label": ["Container"]
     },
     {
         "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/ubuntu/ubuntu.png",
-        "name": "Ubuntu"
+        "name": "Debian/Ubuntu",
+        "label": ["Server"]
+    },
+    {
+        "logo": "https://avatars.githubusercontent.com/u/811839?s=200&v=4",
+        "name": "FreeBSD",
+        "label": ["Server"]
     },
     {
         "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/windows/windows.png",
-        "name": "Windows"
+        "name": "Windows",
+        "label": ["Server"]
     },
     {
         "logo": "https://avatars.githubusercontent.com/u/16785467?s=200&v=4",
-        "name": "GCP"
+        "name": "GCP",
+        "label": ["Cloud"]
     },
     {
         "logo": "https://raw.githubusercontent.com/github/explore/fbceb94436312b6dacde68d122a5b9c7d11f9524/topics/aws/aws.png",
-        "name": "AWS"
+        "name": "AWS",
+        "label": ["Cloud"]
     },
     {
         "logo": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png",
-        "name": "Version Control"
+        "name": "Git",
+        "label": ["Version Control"]
     },
     {
         "logo": "https://avatars.githubusercontent.com/u/1412239?s=200&v=4",
-        "name": "Web"
+        "name": "Nginx",
+        "label": ["Web Server"]
     }
 ]
