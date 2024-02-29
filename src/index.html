@@ -1,0 +1,101 @@
+@include('./_inc/header.html')
+<div class="fixed z-20 top-0 inset-x-0 flex justify-center overflow-hidden pointer-events-none">
+    <div class="w-[108rem] flex-none flex justify-end">
+        <picture>
+            <source srcset="https://tailwindcss.com/_next/static/media/docs@30.8b9a76a2.avif" type="image/avif"><img
+                src="https://tailwindcss.com/_next/static/media/docs@tinypng.d9e4dcdc.png" alt=""
+                class="w-[71.75rem] flex-none max-w-none dark:hidden" decoding="async">
+        </picture>
+        <picture>
+            <source srcset="https://tailwindcss.com/_next/static/media/docs-dark@30.1a9f8cbf.avif" type="image/avif">
+            <img src="https://tailwindcss.com/_next/static/media/docs-dark@tinypng.1bbe175e.png" alt=""
+                class="w-[90rem] flex-none max-w-none hidden dark:block" decoding="async">
+        </picture>
+    </div>
+</div>
+
+<header>
+
+    <div class="container items-center flex md:flex-row flex-col gap-8 py-10">
+        <div>
+            <img class="rounded-full" width="190"
+                src="https://www.gravatar.com/avatar/a70478e77a8a135e408515808889da03?s=300" alt="" />
+        </div>
+
+        <div class="flex-auto">
+            <div
+                class="border-b dark:border-gray-500 md:text-auto md:text-start text-center w-full pb-4 flex md:flex-row flex-col gap-4 items-center justify-between">
+                <div>
+                    <h1 class="title m-0 text-3xl font-semibold" id="page-title">daniwebdev</h1>
+                    <span class="text-2xl">Muhamad Yusup Hamdani</span>
+                    <h6 class="mt-1">Software Engineer <span class="mx-2">·</span> Backend Developer <span
+                            class="mx-2">·</span> Fullstack</h6>
+
+                </div>
+                <div>
+                    <button id="dark-toggle"
+                        class="hidden bg-gray-900 flex items-center gap-3 w-[100px] text-gray-200 px-3 py-1 rounded-lg">
+                        <i class="text-2xl ri-moon-fill"></i> Dark
+                    </button>
+                    <button id="light-toggle"
+                        class="bg-gray-500/80 flex items-center gap-3 w-[100px] text-yellow-500 px-3 py-1 rounded-lg">
+                        <i class="text-2xl ri-sun-fill"></i> Light
+                    </button>
+                </div>
+            </div>
+
+            <div class="py-3 md:block hidden">
+                <div class="md:flex grid grid-cols-2 gap-10">
+                    <div>
+                        <span class="flex items-center gap-2 mb-2">
+                            <i class="text-xl ri-mail-open-fill"></i>
+                            <a href="mailto:me@dani.work">me@dani.work</a>
+                        </span>
+                        <span class="flex items-center gap-2 mb-2">
+                            <i class="text-xl ri-github-fill"></i>
+                            <a href="https://github.com/daniwebdev">github</a>
+                        </span>
+                    </div>
+
+                    <div>
+                        <span class="flex items-center gap-2 mb-2">
+                            <i class="text-xl ri-instagram-fill"></i>
+                            <a href="https://instagram.com/daniwebdev">instagram</a>
+                        </span>
+                        <span class="flex items-center gap-2 mb-2">
+                            <i class="text-xl ri-linkedin-box-fill"></i>
+                            <a href="https://www.linkedin.com/in/daniwebdev/">linkedin</a>
+                        </span>
+                    </div>
+
+                    <div>
+                        <span class="flex items-center gap-2 mb-2">
+                            <i class="text-xl ri-global-line"></i>
+                            <a href="https://dani.work/blog">blog</a>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</header>
+
+<section id="work-experiance" class="mt-20">
+    <div class="container">
+        <h2 class="text-4xl mb-3 font-semibold">Work Experiance</h2>
+        <p class="max-w-[650px] block">
+            Discover my extensive work experience, spanning diverse industries and roles, showcasing my professional growth and expertise.
+        </p>
+
+        <div id="experiances" class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-10">
+            
+        </div>
+    </div>
+</section>
+
+
+@include('./_inc/footer.html')
